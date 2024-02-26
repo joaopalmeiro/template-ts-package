@@ -1,5 +1,7 @@
 # Notes
 
+## Template References
+
 - https://codeberg.org/joaopalmeiro/misc-tsconfigs
 
 ## Commands
