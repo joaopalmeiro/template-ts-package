@@ -1,0 +1,3 @@
+{
+  "extends": "misc-tsconfigs/egoist/tsconfig.json"
+}

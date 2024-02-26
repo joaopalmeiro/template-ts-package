@@ -1,0 +1,66 @@
+{
+  "name": "template-ts-package",
+  "version": "0.0.0",
+  "private": false,
+  "description": "Opinionated TypeScript template for new packages.",
+  "homepage": "https://github.com/joaopalmeiro/template-ts-package",
+  "bugs": {
+    "url": "https://github.com/joaopalmeiro/template-ts-package/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joaopalmeiro/template-ts-package.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "João Palmeiro",
+    "email": "jm.palmeiro@campus.fct.unl.pt",
+    "url": "https://github.com/joaopalmeiro"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.cts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "check": "tsc --showConfig",
+    "format": "run-s format:pkgJson format:code",
+    "format:code": "biome check --apply .",
+    "format:pkgJson": "sort-package-json",
+    "lint": "run-s lint:pkgJson lint:dts lint:publint lint:code",
+    "lint:code": "biome lint .",
+    "lint:dts": "attw --pack .",
+    "lint:pkgJson": "npmPkgJsonLint .",
+    "lint:publint": "publint --strict"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/cli": "0.14.1",
+    "@biomejs/biome": "1.5.3",
+    "misc-tsconfigs": "0.1.0",
+    "npm-package-json-lint": "7.1.0",
+    "npm-package-json-lint-config-package": "0.1.0",
+    "npm-run-all2": "6.1.2",
+    "publint": "0.2.7",
+    "sort-package-json": "2.8.0",
+    "tsup": "8.0.2",
+    "typescript": "5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

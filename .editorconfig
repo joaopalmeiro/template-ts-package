@@ -1,0 +1,14 @@
+root = true
+
+[*]
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+charset = utf-8
+
+# Source:
+# - https://biomejs.dev/guides/how-biome-works/#protected-files
+# - https://github.com/biomejs/biome/blob/cli/v1.5.3/crates/biome_service/src/workspace.rs#L100
+# To ensure consistent indent size with Biome (package.json and tsconfig.json are ignored by Biome):
+[{package.json,tsconfig.json}]
+indent_size = 2
