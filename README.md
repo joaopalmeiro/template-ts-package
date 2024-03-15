@@ -7,6 +7,7 @@ Opinionated TypeScript template for new packages.
 - [API](https://paka.dev/npm/template-ts-package@0.0.0/api)
 - [Licenses](https://licenses.dev/npm/template-ts-package/0.0.0)
 - [Package Phobia](https://packagephobia.com/result?p=template-ts-package@0.0.0)
+- [npm trends](https://npmtrends.com/constantes)
 
 ## Getting Started
 

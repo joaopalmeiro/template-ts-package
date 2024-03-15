@@ -1,6 +1,7 @@
 # Template Notes
 
 - https://codeberg.org/joaopalmeiro/misc-tsconfigs
+- https://github.com/uidotdev/npm-trends
 
 ## Snippets
 
