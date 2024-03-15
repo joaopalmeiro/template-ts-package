@@ -6,6 +6,7 @@ Opinionated TypeScript template for new packages.
 - [npm package](https://www.npmjs.com/package/template-ts-package)
 - [API](https://paka.dev/npm/template-ts-package@0.0.0/api)
 - [Licenses](https://licenses.dev/npm/template-ts-package/0.0.0)
+- [Package Phobia](https://packagephobia.com/result?p=template-ts-package@0.0.0)
 
 ## Getting Started
 
@@ -78,7 +79,7 @@ npm version minor
 npm version major
 ```
 
-- Update the version in the `API` and `Licenses` links at the top.
+- Update the version in the `API`, `Licenses`, and `Package Phobia` links at the top.
 - Commit and push changes.
 - Create a tag on [GitHub Desktop](https://github.blog/2020-05-12-create-and-push-tags-in-the-latest-github-desktop-2-5-release/).
 - Check [GitHub](https://github.com/joaopalmeiro/template-ts-package/tags).
