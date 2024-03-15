@@ -25,7 +25,7 @@ npx degit github:joaopalmeiro/template-ts-package --force
 3. Search for `template-ts-package` and replace it with the package name.
 4. Search for `Opinionated TypeScript template for new packages.` and replace it with the (short) package description.
 5. Search for `João Palmeiro` and replace it with the author's name.
-6. Search for `jm.palmeiro@campus.fct.unl.pt` and replace it with the author's email address.
+6. Search for `joaopalmeiro@proton.me` and replace it with the author's email address.
 7. Change the `author.url` field in the `package.json` file to the author's website/social media profile.
 8. Install [fnm](https://github.com/Schniz/fnm) (if necessary).
 9. Run the first two commands in the [`Development`](#development) section to install [Node.js](https://nodejs.org/en) and the development dependencies.
