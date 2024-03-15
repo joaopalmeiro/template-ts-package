@@ -1,8 +1,6 @@
 # Notes
 
-## Template References
-
-- https://codeberg.org/joaopalmeiro/misc-tsconfigs
+- https://github.com/joaopalmeiro/template-ts-package
 
 ## Commands
 

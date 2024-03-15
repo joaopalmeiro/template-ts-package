@@ -33,7 +33,7 @@ npx degit github:joaopalmeiro/template-ts-package --force
 11. Update the `Source code` link at the top to the package repository link (if necessary).
 12. Change `GitHub` in the [`Deployment` section](#deployment) to `GitLab` or `Codeberg` and update the link to the corresponding Tags page (if necessary).
 13. Update the `homepage`, `bugs.url`, and `repository.url` fields in the `package.json` file with their respective repository-related links (if necessary).
-14. Delete the [`Template References` section](NOTES.md#template-references) from the [NOTES.md](NOTES.md) file.
+14. Delete the [TEMPLATE.md](TEMPLATE.md) file.
 15. Delete the [`Getting Started` section](#getting-started).
 
 ## Development
