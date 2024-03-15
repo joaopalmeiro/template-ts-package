@@ -2,6 +2,8 @@
 
 - https://codeberg.org/joaopalmeiro/misc-tsconfigs
 - https://github.com/uidotdev/npm-trends
+- https://docs.npmjs.com/cli/v9/commands/npm-pkg
+- https://uly.me/remove-quotes-from-strings
 
 ## Snippets
 
