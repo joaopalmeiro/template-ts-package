@@ -28,13 +28,13 @@ npx degit github:joaopalmeiro/template-ts-package --force
 6. Search for `jm.palmeiro@campus.fct.unl.pt` and replace it with the author's email address.
 7. Change the `author.url` field in the `package.json` file to the author's website/social media profile.
 8. Install [fnm](https://github.com/Schniz/fnm) (if necessary).
-9. Run the first two commands in the [`Development` section](#development) to install [Node.js](https://nodejs.org/en) and the development dependencies.
-10. Open the [NOTES.md](NOTES.md) file and install the package-specific dependencies according to the first command in the [Commands section](NOTES.md#commands).
+9. Run the first two commands in the [`Development`](#development) section to install [Node.js](https://nodejs.org/en) and the development dependencies.
+10. Open the [NOTES.md](NOTES.md) file and install the package-specific dependencies according to the first command in the [`Commands`](NOTES.md#commands) section.
 11. Update the `Source code` link at the top to the package repository link (if necessary).
-12. Change `GitHub` in the [`Deployment` section](#deployment) to `GitLab` or `Codeberg` and update the link to the corresponding Tags page (if necessary).
+12. Change `GitHub` in the [`Deployment`](#deployment) section to `GitLab` or `Codeberg` and update the link to the corresponding Tags page (if necessary).
 13. Update the `homepage`, `bugs.url`, and `repository.url` fields in the `package.json` file with their respective repository-related links (if necessary).
 14. Delete the [TEMPLATE.md](TEMPLATE.md) file.
-15. Delete the [`Getting Started` section](#getting-started).
+15. Delete the [`Getting Started`](#getting-started) section.
 
 ## Development
 
