@@ -1,6 +1,7 @@
 # Notes
 
 - https://github.com/joaopalmeiro/template-ts-package
+- https://codeberg.org/joaopalmeiro/biome-config
 
 ## Commands
 
@@ -8,6 +9,7 @@
 npm install -D \
 @arethetypeswrong/cli \
 @biomejs/biome \
+@joaopalmeiro/biome-config \
 misc-tsconfigs \
 npm-package-json-lint \
 npm-package-json-lint-config-package \
