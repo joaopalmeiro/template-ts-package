@@ -11,6 +11,7 @@
   - https://github.com/biomejs/biome/blob/cli/v1.6.3/crates/biome_service/src/workspace.rs#L101
   - https://biomejs.dev/reference/cli/#biome-rage
   - https://biomejs.dev/linter/rules/use-sorted-classes/
+- https://docs.npmjs.com/cli/v9/configuring-npm/npmrc: "All npm config files are an ini-formatted (...)"
 
 ## Snippets
 
@@ -33,4 +34,13 @@ charset = utf-8
 # To ensure consistent indent size with Biome (package.json and tsconfig.json are ignored by Biome):
 [{package.json,tsconfig.json}]
 indent_size = 2
+```
+
+### Minimal `.npmrc`
+
+```ini
+package-lock=false
+save-exact=true
+git-tag-version=false
+engine-strict=true
 ```
