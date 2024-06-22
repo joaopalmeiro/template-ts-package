@@ -8,6 +8,7 @@ Opinionated TypeScript template for new packages.
 - [Licenses](https://licenses.dev/npm/template-ts-package/0.0.0)
 - [Package Phobia](https://packagephobia.com/result?p=template-ts-package@0.0.0)
 - [npm trends](https://npmtrends.com/template-ts-package)
+- [Snyk Advisor](https://snyk.io/advisor/npm-package/template-ts-package)
 
 ## Getting Started
 
