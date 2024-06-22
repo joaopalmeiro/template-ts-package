@@ -7,6 +7,7 @@ Opinionated TypeScript template for new packages.
 - [API](https://paka.dev/npm/template-ts-package@0.0.0/api)
 - [Licenses](https://licenses.dev/npm/template-ts-package/0.0.0)
 - [Package Phobia](https://packagephobia.com/result?p=template-ts-package@0.0.0)
+- [bundlejs](https://bundlejs.com/?bundle&q=template-ts-package%400.0.0)
 - [npm trends](https://npmtrends.com/template-ts-package)
 - [Snyk Advisor](https://snyk.io/advisor/npm-package/template-ts-package)
 
@@ -81,7 +82,7 @@ npm version minor
 npm version major
 ```
 
-- Update the version in the `API`, `Licenses`, and `Package Phobia` links at the top.
+- Update the version in the `API`, `Licenses`, `Package Phobia`, and `bundlejs` links at the top.
 
 ```bash
 echo "v$(npm pkg get version | tr -d \")" | pbcopy
