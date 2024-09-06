@@ -17,6 +17,14 @@
   - `"build": "tsup src/index.ts --format cjs,esm --dts --clean --sourcemap"`
 - https://github.com/arethetypeswrong/arethetypeswrong.github.io/releases
 - https://www.warp.dev/terminus/clear-npm-cache
+- https://www.totaltypescript.com/how-to-create-an-npm-package:
+  - https://www.totaltypescript.com/how-to-create-an-npm-package#56-fix-the-cjs-warning:
+    - "If you don't want to support CJS (which I recommend), change the check-exports script to: `{ "scripts": { "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm" } }`"
+    - https://www.totaltypescript.com/tsconfig-cheat-sheet
+    - https://github.com/total-typescript/tsconfig/blob/a42aef4f2350ac88b0b5d6ce88325481c964188d/bundler/no-dom.json
+    - https://github.com/total-typescript/tsconfig/blob/a42aef4f2350ac88b0b5d6ce88325481c964188d/tsc/no-dom/library.json
+- https://github.com/mattpocock/package-tools
+- https://github.com/egoist/tsup/blob/v8.2.4/src/options.ts#L191-L195
 
 ## Deprecated links
 
@@ -74,4 +82,18 @@ engine-strict=true
     }
   }
 }
+```
+
+- https://github.com/mattpocock/tt-package-demo/blob/83de5832841954a26eca84331f5e403051f0e755/tsup.config.ts
+
+```ts
+import { defineConfig } from "tsup";
+
+export default defineConfig({
+  entryPoints: ["src/index.ts"],
+  format: ["cjs", "esm"],
+  dts: true,
+  outDir: "dist",
+  clean: true,
+});
 ```
