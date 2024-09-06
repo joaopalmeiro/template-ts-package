@@ -30,3 +30,9 @@ rm -rf node_modules/ && npm install
 ```bash
 rm -rf node_modules/ && npm cache clean --force && npm install
 ```
+
+### Clean slate
+
+```bash
+rm -rf dist/ node_modules/
+```
