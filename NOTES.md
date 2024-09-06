@@ -1,7 +1,6 @@
 # Notes
 
 - https://github.com/joaopalmeiro/template-ts-package
-- https://codeberg.org/joaopalmeiro/biome-config
 
 ## Commands
 

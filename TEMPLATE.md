@@ -1,5 +1,6 @@
 # Template Notes
 
+- https://codeberg.org/joaopalmeiro/biome-config
 - https://codeberg.org/joaopalmeiro/misc-tsconfigs
 - https://github.com/uidotdev/npm-trends
 - https://docs.npmjs.com/cli/v9/commands/npm-pkg
@@ -15,7 +16,8 @@
 - https://github.com/anvaka/npmgraph.an
 - https://johnnyreilly.com/dual-publishing-esm-cjs-modules-with-tsup-and-are-the-types-wrong:
   - `"build": "tsup src/index.ts --format cjs,esm --dts --clean --sourcemap"`
-- https://github.com/arethetypeswrong/arethetypeswrong.github.io/releases
+- https://github.com/arethetypeswrong/arethetypeswrong.github.io/releases:
+  - https://www.npmjs.com/package/@arethetypeswrong/cli/v/0.16.0
 - https://www.warp.dev/terminus/clear-npm-cache
 - https://www.totaltypescript.com/how-to-create-an-npm-package:
   - https://www.totaltypescript.com/how-to-create-an-npm-package#56-fix-the-cjs-warning:
@@ -25,6 +27,7 @@
     - https://github.com/total-typescript/tsconfig/blob/a42aef4f2350ac88b0b5d6ce88325481c964188d/tsc/no-dom/library.json
 - https://github.com/mattpocock/package-tools
 - https://github.com/egoist/tsup/blob/v8.2.4/src/options.ts#L191-L195
+- https://github.com/mikaelbr/marked-terminal: "A custom render for marked to output to the Terminal"
 
 ## Deprecated links
 
