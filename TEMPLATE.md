@@ -16,6 +16,7 @@
 - https://johnnyreilly.com/dual-publishing-esm-cjs-modules-with-tsup-and-are-the-types-wrong:
   - `"build": "tsup src/index.ts --format cjs,esm --dts --clean --sourcemap"`
 - https://github.com/arethetypeswrong/arethetypeswrong.github.io/releases
+- https://www.warp.dev/terminus/clear-npm-cache
 
 ## Deprecated links
 

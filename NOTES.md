@@ -27,3 +27,7 @@ npm install -D "@types/node@$(cat .nvmrc | cut -d . -f 1-2)"
 ```bash
 rm -rf node_modules/ && npm install
 ```
+
+```bash
+rm -rf node_modules/ && npm cache clean --force && npm install
+```
