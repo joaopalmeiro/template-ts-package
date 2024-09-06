@@ -13,6 +13,10 @@
   - https://biomejs.dev/linter/rules/use-sorted-classes/
 - https://docs.npmjs.com/cli/v9/configuring-npm/npmrc: "All npm config files are an ini-formatted (...)"
 
+## Deprecated links
+
+- [Types](https://tsdocs.dev/docs/template-ts-package/0.0.0)
+
 ## Snippets
 
 ```markdown
