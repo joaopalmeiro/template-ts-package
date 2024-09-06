@@ -29,6 +29,8 @@
 - https://github.com/egoist/tsup/blob/v8.2.4/src/options.ts#L191-L195
 - https://github.com/mikaelbr/marked-terminal: "A custom render for marked to output to the Terminal"
 - https://github.com/egoist/tsup/releases
+- https://github.com/bluwy/publint/releases
+- https://publint.dev/rules#invalid_repository_value
 
 ## Deprecated links
 
