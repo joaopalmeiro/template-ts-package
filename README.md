@@ -4,10 +4,9 @@ Opinionated TypeScript template for new packages.
 
 - [Source code](https://github.com/joaopalmeiro/template-ts-package)
 - [npm package](https://www.npmjs.com/package/template-ts-package)
-- [API](https://paka.dev/npm/template-ts-package@0.0.0/api)
-- [Licenses](https://licenses.dev/npm/template-ts-package/0.0.0)
-- [Package Phobia](https://packagephobia.com/result?p=template-ts-package@0.0.0)
-- [bundlejs](https://bundlejs.com/?bundle&q=template-ts-package%400.0.0)
+- [Licenses](https://licenses.dev/npm/template-ts-package)
+- [Package Phobia](https://packagephobia.com/result?p=template-ts-package)
+- [bundlejs](https://bundlejs.com/?bundle&q=template-ts-package)
 - [npm trends](https://npmtrends.com/template-ts-package)
 - [Snyk Advisor](https://snyk.io/advisor/npm-package/template-ts-package)
 - [Visualization of npm dependencies](https://npm.anvaka.com/#/view/2d/template-ts-package)
@@ -82,8 +81,6 @@ npm version minor
 ```bash
 npm version major
 ```
-
-- Update the version in the `API`, `Licenses`, `Package Phobia`, and `bundlejs` links at the top.
 
 ```bash
 echo "v$(npm pkg get version | tr -d \")" | pbcopy

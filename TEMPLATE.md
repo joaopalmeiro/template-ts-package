@@ -32,6 +32,10 @@
 ## Deprecated links
 
 - [Types](https://tsdocs.dev/docs/template-ts-package/0.0.0)
+- [API](https://paka.dev/npm/template-ts-package@0.0.0/api)
+- [Licenses](https://licenses.dev/npm/template-ts-package/0.0.0)
+- [Package Phobia](https://packagephobia.com/result?p=template-ts-package@0.0.0)
+- [bundlejs](https://bundlejs.com/?bundle&q=template-ts-package%400.0.0)
 
 ## Snippets
 
@@ -54,6 +58,10 @@ charset = utf-8
 # To ensure consistent indent size with Biome (package.json and tsconfig.json are ignored by Biome):
 [{package.json,tsconfig.json}]
 indent_size = 2
+```
+
+```markdown
+- Update the version in the `API`, `Licenses`, `Package Phobia`, and `bundlejs` links at the top.
 ```
 
 ### Minimal `.npmrc`
