@@ -13,6 +13,9 @@
   - https://biomejs.dev/linter/rules/use-sorted-classes/
 - https://docs.npmjs.com/cli/v9/configuring-npm/npmrc: "All npm config files are an ini-formatted (...)"
 - https://github.com/anvaka/npmgraph.an
+- https://johnnyreilly.com/dual-publishing-esm-cjs-modules-with-tsup-and-are-the-types-wrong:
+  - `"build": "tsup src/index.ts --format cjs,esm --dts --clean --sourcemap"`
+- https://github.com/arethetypeswrong/arethetypeswrong.github.io/releases
 
 ## Deprecated links
 
@@ -48,4 +51,26 @@ package-lock=false
 save-exact=true
 git-tag-version=false
 engine-strict=true
+```
+
+- https://johnnyreilly.com/dual-publishing-esm-cjs-modules-with-tsup-and-are-the-types-wrong
+
+```json
+{
+  "//": "This is the correct way to set up a package with a `src/index.ts` root file that supports both ESM and CJS modules.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "import": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "require": {
+      "types": "./dist/index.d.cts",
+      "require": "./dist/index.cjs"
+    }
+  }
+}
 ```
