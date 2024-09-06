@@ -10,6 +10,7 @@ Opinionated TypeScript template for new packages.
 - [bundlejs](https://bundlejs.com/?bundle&q=template-ts-package%400.0.0)
 - [npm trends](https://npmtrends.com/template-ts-package)
 - [Snyk Advisor](https://snyk.io/advisor/npm-package/template-ts-package)
+- [Visualization of npm dependencies](https://npm.anvaka.com/#/view/2d/template-ts-package)
 
 ## Getting Started
 

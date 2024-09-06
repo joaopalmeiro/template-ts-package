@@ -12,6 +12,7 @@
   - https://biomejs.dev/reference/cli/#biome-rage
   - https://biomejs.dev/linter/rules/use-sorted-classes/
 - https://docs.npmjs.com/cli/v9/configuring-npm/npmrc: "All npm config files are an ini-formatted (...)"
+- https://github.com/anvaka/npmgraph.an
 
 ## Deprecated links
 
