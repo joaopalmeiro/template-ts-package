@@ -35,6 +35,10 @@
   - https://semver.npmjs.com/
   - `>=1.0.0-rc.0 <1.0.1`
   - SVGO: `>=4.0.0-rc.0`
+- TanStack Config:
+  - https://tanstack.com/config/latest
+  - https://tanstack.com/config/latest/docs/publish
+  - https://github.com/TanStack/config
 
 ## Deprecated links
 
