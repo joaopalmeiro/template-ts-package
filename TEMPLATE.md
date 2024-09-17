@@ -31,6 +31,10 @@
 - https://github.com/egoist/tsup/releases
 - https://github.com/bluwy/publint/releases
 - https://publint.dev/rules#invalid_repository_value
+- https://semver.npmjs.com/#syntax-examples:
+  - https://semver.npmjs.com/
+  - `>=1.0.0-rc.0 <1.0.1`
+  - SVGO: `>=4.0.0-rc.0`
 
 ## Deprecated links
 
