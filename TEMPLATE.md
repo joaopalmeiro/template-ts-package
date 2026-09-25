@@ -39,6 +39,7 @@
   - https://tanstack.com/config/latest
   - https://tanstack.com/config/latest/docs/publish
   - https://github.com/TanStack/config
+- https://github.com/icelib/npm-lib-template
 
 ## Deprecated links
 
@@ -116,6 +117,19 @@ export default defineConfig({
   format: ["cjs", "esm"],
   dts: true,
   outDir: "dist",
+  clean: true,
+});
+```
+
+- https://github.com/icelib/npm-lib-template/blob/759dee7863873a7f147ae845157af38736d39a66/tsdown.config.ts
+
+```ts
+import { defineConfig } from "tsdown";
+
+export default defineConfig({
+  entry: ["src/index.ts"],
+  format: ["esm", "cjs"],
+  dts: true,
   clean: true,
 });
 ```

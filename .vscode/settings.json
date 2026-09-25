@@ -1,0 +1,9 @@
+{
+  "search.exclude": {
+    "deprecated/**": true
+  },
+
+  "files.readonlyInclude": {
+    "deprecated/**": true
+  }
+}
