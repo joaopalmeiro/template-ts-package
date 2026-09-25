@@ -40,6 +40,9 @@
   - https://tanstack.com/config/latest/docs/publish
   - https://github.com/TanStack/config
 - https://github.com/icelib/npm-lib-template
+- https://tsdown.dev/guide/
+- https://tsdown.dev/options/lint
+- https://tsdown.dev/reference/api/Interface.DtsOptions#tsgo
 
 ## Deprecated links
 
@@ -48,6 +51,16 @@
 - [Licenses](https://licenses.dev/npm/template-ts-package/0.0.0)
 - [Package Phobia](https://packagephobia.com/result?p=template-ts-package@0.0.0)
 - [bundlejs](https://bundlejs.com/?bundle&q=template-ts-package%400.0.0)
+
+## Commands
+
+```bash
+npm create tsdown@0.23.0 template-tsdown
+```
+
+```bash
+npm install -D "@types/node@$(cat .nvmrc | cut -d . -f 1-2)"
+```
 
 ## Snippets
 

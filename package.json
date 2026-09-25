@@ -1,0 +1,44 @@
+{
+  "name": "template-ts-package",
+  "version": "0.0.0",
+  "private": false,
+  "description": "Opinionated TypeScript template for new packages.",
+  "homepage": "https://github.com/joaopalmeiro/template-ts-package",
+  "bugs": {
+    "url": "https://github.com/joaopalmeiro/template-ts-package/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "João Palmeiro",
+    "email": "joaopalmeiro@proton.me",
+    "url": "https://joao.town/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaopalmeiro/template-ts-package.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "format": "oxfmt",
+    "lint": "run-s lint:types lint:code",
+    "lint:code": "oxlint --fix",
+    "lint:types": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "24.13.5",
+    "npm-run-all2": "8.0.4",
+    "oxfmt": "0.68.0",
+    "oxlint": "1.79.0",
+    "tsdown": "0.22.5",
+    "typescript": "7.0.2"
+  }
+}
