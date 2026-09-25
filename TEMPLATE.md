@@ -50,6 +50,9 @@
   - https://docs.npmjs.com/trusted-publishers
   - https://docs.github.com/en/actions/how-tos/deploy/configure-and-manage-deployments/manage-environments
   - https://github.com/feedzai/AutoVizuA11y/blob/b819e1e45a0c2958db56f934aa1c6de313ca4a2d/.github/workflows/release_package.yml
+- https://github.com/ai/clean-npm-project
+- https://github.com/shashkovdanil/clean-publish
+- https://github.com/step-security/harden-runner
 
 ## Deprecated links
 
@@ -67,6 +70,10 @@ npm create tsdown@0.23.0 template-tsdown
 
 ```bash
 npm install -D "@types/node@$(cat .nvmrc | cut -d . -f 1-2)"
+```
+
+```bash
+npx clean-publish --without-publish
 ```
 
 ## Snippets
@@ -152,4 +159,151 @@ export default defineConfig({
   dts: true,
   clean: true,
 });
+```
+
+- https://github.com/ai/multiocular/blob/0cde4c8fe349b590c6845ae9b2767ae40b896d3c/.github/workflows/publish.yml
+
+```yml
+name: Publish
+on:
+  push:
+    tags:
+      - "*"
+jobs:
+  test:
+    name: Run Tests
+    uses: ./.github/workflows/test.yml
+  build:
+    name: Build JS safer
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Harden the runner
+        uses: step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920 # v2.20.0
+        with:
+          egress-policy: block
+          allowed-endpoints: >
+            api.github.com:443
+            github.com:443
+            nodejs.org:443
+            release-assets.githubusercontent.com:443
+            objects.githubusercontent.com:443
+            registry.npmjs.org:443
+      - name: Checkout the repository
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+      - name: Install Node.js & pnpm
+        uses: pnpm/setup@5d160c5bc68a09337ad0d5654e237e03253b5879 # v1.0.0
+        with:
+          version: 11
+          runtime: node@26
+      - name: Install dependencies
+        run: pnpm install --ignore-scripts
+      - name: Run build
+        run: pnpm build
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: build-artifacts
+          path: dist/
+          retention-days: 1
+  publish:
+    name: Publish to npm
+    needs:
+      - test
+      - build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - name: Harden the runner
+        uses: step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920 # v2.20.0
+        with:
+          egress-policy: block
+          allowed-endpoints: >
+            api.github.com:443
+            github.com:443
+            release-assets.githubusercontent.com:443
+            registry.npmjs.org:443
+            *.sigstore.dev:443
+      - name: Checkout the repository
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+      - name: Download build artifacts
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: build-artifacts
+          path: dist/
+      - name: Install npm
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 26
+          registry-url: "https://registry.npmjs.org"
+      - name: Publish to npm with provenance
+        run: cd dist && npm stage publish --provenance --access public
+  release:
+    name: Create GitHub Release
+    needs: test
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Harden the runner
+        uses: step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920 # v2.20.0
+        with:
+          egress-policy: block
+          allowed-endpoints: >
+            api.github.com:443
+            github.com:443
+      - name: Checkout the repository
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+      - name: Clean npm package
+        uses: ai/copy-changelog-to-release@a6dc825c34575add2da2060796794f7b84894628 # v0.2.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+```
+
+- https://github.com/ai/nanospy/blob/d8f30882babe8baf41add90411bb989a1403003b/.github/workflows/release.yml
+
+```yml
+name: Release
+on:
+  push:
+    tags:
+      - "*"
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          persist-credentials: false
+      - name: Clean npm package
+        uses: ai/clean-npm-project@0e1fd6e68c39b972235226864d47e368c550ebed # v0.2.3
+        with:
+          clean-docs: true
+      - name: Install Node.js
+        uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6.4.0
+        with:
+          node-version: 26
+      - name: Publish npm package
+        run: npm stage publish
+        working-directory: cleaned-project/
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          persist-credentials: false
+      - name: Clean npm package
+        uses: ai/copy-changelog-to-release@d5918dc4898c6edab80133cea308047acf28805e # v0.1.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
