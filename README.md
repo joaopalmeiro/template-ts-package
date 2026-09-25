@@ -21,15 +21,15 @@ npx giget github:joaopalmeiro/template-ts-package . --force
 6. Search for `joaopalmeiro@proton.me` and replace it with the author's email address.
 7. Change the `author.url` field in the `package.json` file to the author's website/social media profile.
 8. Install [fnm](https://github.com/Schniz/fnm) (if necessary).
-9. Update the `Source code` link at the top to the package repository link (if necessary).
-10. Change `GitHub` in the [`Deployment`](#deployment) section to `GitLab` or `Codeberg` and update the link to the corresponding Tags page (if necessary).
-11. Update the `homepage`, `bugs.url`, and `repository.url` fields in the `package.json` file with their respective repository-related links (if necessary).
-12. Delete the [deprecated/](deprecated) folder and the corresponding configuration in the [.vscode/settings.json](.vscode/settings.json) and [.oxlintrc.json](.oxlintrc.json) files.
-13. Remove `template-tsdown/` from the [.gitignore](.gitignore) file.
-14. Delete the [TEMPLATE.md](TEMPLATE.md) file.
-15. Delete the [`Getting Started`](#getting-started) section.
+9. Update the `homepage`, `bugs.url`, and `repository.url` fields in the `package.json` file with their respective repository-related links (if necessary).
+10. Delete the [deprecated/](deprecated) folder and the corresponding configuration in the [.vscode/settings.json](.vscode/settings.json) and [.oxlintrc.json](.oxlintrc.json) files.
+11. Remove `template-tsdown/` from the [.gitignore](.gitignore) file.
+12. Delete the [TEMPLATE.md](TEMPLATE.md) file.
+13. Delete the [`Getting Started`](#getting-started) section.
 
 ## Development
+
+Install [zizmor](https://docs.zizmor.sh/installation/) and [pinact](https://github.com/suzuki-shunsuke/pinact/blob/main/INSTALL.md) (if necessary).
 
 Install [fnm](https://github.com/Schniz/fnm) (if necessary).
 
@@ -53,11 +53,24 @@ npm run format
 npm run build
 ```
 
-## Deployment
-
 ```bash
 npm pack --dry-run
 ```
+
+### GitHub Actions
+
+```bash
+zizmor .
+```
+
+```bash
+pinact run -u --min-age 7
+```
+
+## Deployment
+
+- Create the `release` [GitHub Actions environment](https://github.com/joaopalmeiro/template-ts-package/settings/environments) (if necessary).
+- [Configure trusted publishing](https://docs.npmjs.com/trusted-publishers#configuring-trusted-publishing) (if necessary).
 
 ```bash
 npm version patch
@@ -77,14 +90,5 @@ echo "v$(npm pkg get version | tr -d \")" | pbcopy
 
 - Commit and push changes.
 - Create a tag on [GitHub Desktop](https://github.blog/2020-05-12-create-and-push-tags-in-the-latest-github-desktop-2-5-release/).
-- Check [GitHub](https://github.com/joaopalmeiro/template-ts-package/tags).
-
-```bash
-npm login
-```
-
-```bash
-npm publish
-```
-
+- Check GitHub: [Tags](https://github.com/joaopalmeiro/template-ts-package/tags) and [Actions](https://github.com/joaopalmeiro/template-ts-package/actions).
 - Check [npm](https://www.npmjs.com/package/template-ts-package).

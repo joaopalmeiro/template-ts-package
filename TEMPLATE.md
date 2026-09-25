@@ -44,6 +44,12 @@
 - https://tsdown.dev/options/lint
 - https://tsdown.dev/reference/api/Interface.DtsOptions#tsgo
 - https://tsdown.dev/options/dts#declaration-map + https://tsdown.dev/options/sourcemap
+- https://github.com/lirantal/npm-security-best-practices
+- https://github.com/actions/setup-node
+- Trusted publishing:
+  - https://docs.npmjs.com/trusted-publishers
+  - https://docs.github.com/en/actions/how-tos/deploy/configure-and-manage-deployments/manage-environments
+  - https://github.com/feedzai/AutoVizuA11y/blob/b819e1e45a0c2958db56f934aa1c6de313ca4a2d/.github/workflows/release_package.yml
 
 ## Deprecated links
 
