@@ -7,17 +7,23 @@
   "bugs": {
     "url": "https://github.com/joaopalmeiro/template-ts-package/issues"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/joaopalmeiro/template-ts-package.git"
-  },
   "license": "MIT",
   "author": {
     "name": "João Palmeiro",
     "email": "joaopalmeiro@proton.me",
     "url": "https://github.com/joaopalmeiro"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaopalmeiro/template-ts-package.git"
+  },
+  "files": [
+    "dist"
+  ],
   "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.cts",
   "exports": {
     ".": {
       "import": {
@@ -30,10 +36,6 @@
       }
     }
   },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.cts",
-  "files": ["dist"],
   "scripts": {
     "build": "tsup",
     "check:biome": "biome rage --formatter --linter",
