@@ -43,6 +43,9 @@
 - https://tsdown.dev/guide/
 - https://tsdown.dev/options/lint
 - https://tsdown.dev/reference/api/Interface.DtsOptions#tsgo
+- https://tsdown.dev/options/dts#declaration-map + https://tsdown.dev/options/sourcemap
+- "9. Run the first two commands in the [`Development`](#development) section to install [Node.js](https://nodejs.org/en) and the development dependencies."
+- "10. Open the [NOTES.md](NOTES.md) file and install the package-specific dependencies according to the first command in the [`Commands`](NOTES.md#commands) section."
 
 ## Deprecated links
 

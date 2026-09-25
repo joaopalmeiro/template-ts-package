@@ -5,4 +5,8 @@ export default defineConfig({
     tsgo: true,
   },
   exports: true,
+  publint: true,
+  attw: {
+    profile: "esm-only",
+  },
 });
